@@ -18,7 +18,10 @@
 					#soccerLeague.age#
 				</div>
 			</cfoutput>
-		</body
+			<form action = "viewAllPlayers.cfm" method = "post">
+				Submit:<input type="submit">
+			</form>
+		</body>
 	</head>
 </html>
 
