@@ -1,10 +1,26 @@
 <html>
 	<head>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script>	
+			$(document).ready(function(){
+			  $("#button1").click(function(){
+			    $("#allPlayers2").toggle();	
+			  });
+			});
+		</script>
 		<style type="text/css">	
 			.redFont {color: #FF0000;}
 			.blueFont {color: #3333CC;}
-		</style>.
+		</style>
 		
+		<script typ		e="text/javascript">
+			function hideBlueResults(){
+
+			}
+
+		</script>
+
 		<title>ColdFusion SoccerLeague</title>
 		<h1>List of all Players Registered</h1>
 	</head>
@@ -25,7 +41,10 @@
 					#displayAllPlayers.lastname#
 					#displayAllPlayers.age#
 				</div>
-			</cfoutput> 
+			</cfoutput>
+
+			<button id="button1" onclick="">Toggle</button>
+
 
 		</body>
 </html>
