@@ -12,9 +12,10 @@
 		<style type="text/css">	
 			.redFont {color: #FF0000;}
 			.blueFont {color: #3333CC;}
+			h1 {text-align: center}
 		</style>
 		
-		<script typ		e="text/javascript">
+		<script type="text/javascript">
 			function hideBlueResults(){
 
 			}
@@ -29,20 +30,28 @@
 			<cfquery name="displayAllPlayers" datasource="soccerLeague">
 				select * from player;
 			</cfquery>
+
 			<table border="1" style="width:100%"
+				<tr>
+				<th>Player Name:
+				<th>Age:
+				</tr>
+
 			<cfoutput query="displayAllPlayers">
+
 				<cfif (displayAllPlayers.age lt 20)>
 					<cfset myColorClass = "redFont">
 				<cfelse>
 					<cfset myColorClass = "blueFont">
 				</cfif>
+
 				<tr>
-				<td id="allPlayers#displayAllPlayers.currentRow#" class="#myColorClass#">#displayAllPlayers.firstname#</td>
-				<td id="allPlayers#displayAllPlayers.currentRow#" class="#myColorClass#">#displayAllPlayers.lastname#</td>
+				<td id="allPlayers#displayAllPlayers.currentRow#" class="#myColorClass#">#displayAllPlayers.firstname# #displayAllPlayers.lastname#</td>
 				<td id="allPlayers#displayAllPlayers.currentRow#" class="#myColorClass#">#displayAllPlayers.age#</td>
 				</tr>
-			</cfoutput>
 
+			</cfoutput>
+			</table>
 			<button id="button1" onclick="">Toggle</button>
 
 

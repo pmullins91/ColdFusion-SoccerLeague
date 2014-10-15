@@ -1,6 +1,10 @@
 <html>
 	<head>
+		<style type="text/css">	
+			h1 {text-align: center}
+		</style>
 		<title>ColdFusion SoccerLeague</title>
+	</head>
 		<h1>ColdFusion SoccerLeague</h1>
 		<body>
 
@@ -12,5 +16,4 @@
 			</form>
 			
 		</body>
-	</head>
 </html>
